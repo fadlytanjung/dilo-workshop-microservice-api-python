@@ -43,7 +43,7 @@ python3 migrate.py db upgrade
 Running this app with following command:
 
 ```
-python main.py
+python3 main.py
 ```
 
 Using this token, you can then call the protected endpoints by adding the following headers to your calls:
