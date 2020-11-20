@@ -17,7 +17,7 @@ api = Api(v1)
 # Set the default route
 @v1.route('/')
 def show():
-    return 'Hello World'
+    return {"status":True,"message":"Welcome to Users API"},200
 
 #############################################
 #              Routes Url                   #

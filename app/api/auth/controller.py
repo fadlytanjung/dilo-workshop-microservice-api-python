@@ -56,6 +56,10 @@ class AuthLogin(Resource):
 
             elif user and user.verify_password(password):
                 user_info = user_schema.dump(user)
+                
+                if user_info['status'] == 'inactive':
+                    return message(False,"your account hasn't been activated"), 401
+
                 user_object = UserObject(username=user.username,role=user.role)
                 access_token = create_access_token(identity=user_object)
 

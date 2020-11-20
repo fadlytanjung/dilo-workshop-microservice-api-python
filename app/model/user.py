@@ -14,7 +14,7 @@ class User(Model):
     password_hash = Column(db.String(128))
     
     status = Column(db.String(10),default='inactive')
-    role = Column(db.Integer, default='1')
+    role = Column(db.Integer, default=1)
     created_at = Column(db.DateTime, default=datetime.utcnow)
 
     def __init__(self, **kwargs):
