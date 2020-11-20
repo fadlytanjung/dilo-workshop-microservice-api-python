@@ -126,7 +126,8 @@ class AuthRegister(Resource):
             db.session.commit()
 
             # Create an access token
-            access_token = create_access_token(identity=new_user.id)
+            user_object = UserObject(username=user_info['username'],role=user_info['role'])
+            access_token = create_access_token(identity=user_object)
 
             resp = message(True, "User has been registered.")
             resp["access_token"] = access_token
