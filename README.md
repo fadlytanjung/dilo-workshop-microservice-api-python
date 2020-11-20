@@ -30,7 +30,7 @@ pip3 install -r requirements.txt
 
 ## Before Running Server - Set Up Database:
 
-Create your DB in Postgres using the credentials stored in the ```config/base_settings.py``` file (see the ```setup.md``` file for instructions on doing this), and then run the following from the project root:
+Create your DB in Postgres or MySQL and setting the configuration in ```.env```  file , you can see ```env.example ``` to see the example of file, and then run the following from the project root:
 
 ```bash
 python3 migrate.py db init
@@ -38,6 +38,13 @@ python3 migrate.py db migrate
 python3 migrate.py db upgrade
 ```
 
+## Running App 
+
+Running this app with following command:
+
+```
+python3 main.py
+```
 
 Using this token, you can then call the protected endpoints by adding the following headers to your calls:
 
