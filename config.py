@@ -18,7 +18,7 @@ class Config:
     JWT_SECRET_KEY = os.getenv("JWT_SECRET_KEY")
     ## Set the token to expire every week
     JWT_ACCESS_TOKEN_EXPIRES = timedelta(days=7)
-
+    ENV = os.getenv('ENV')
 
 class DevelopmentConfig(Config):
     DEBUG = True
